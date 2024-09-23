@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- DaisyUI cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind config customizing -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#B4F461',
+                textBold: '#111111',
+                navBgColor: '#F9F7F3',
+              },
+              font_family:{
+                Lexend :'Lexend',
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        body{
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-navBgColor">
+        <!-- navbar starts here -->
+        <nav class="w-11/12 mx-auto py-8">
+            <div class="navbar bg-navBgColor">
+                <div class="navbar-start">
+                    <a class="btn px-9 text-xl font-semibold bg-primary">Home</a>
+                </div>
+                <div class="navbar-center hidden lg:flex gap-3">
+                    <div>
+                        <img src="/assets/logo.png" alt="">
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
+                    </div>
+                </div>
+                <div class="navbar-end gap-2">
+                    <div>
+                        <img src="/assets/coin.png" alt="">
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-medium"><span>5500</span> BDT</h2>
+                    </div>
+                </div>
+              </div>
+        </nav>
+        <!-- navbar ends here -->
+    </header>
+    <main>
+        <section class="w-11/12 mx-auto my-8">
+            <h1 class="text-4xl font-bold">
+                <span>Important FAQ</span>
+                <span><i class="fa-regular fa-circle-question"></i></span>
+            </h1>
+            <div class="join join-vertical w-full mt-8">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" checked="checked" />
+                  <div class="collapse-title text-xl font-medium">Can I donate goods instead of money?</div>
+                  <div class="collapse-content">
+                    <p>While goods are appreciated, financial donations allow relief organizations to be more flexible and efficient in purchasing the most needed items locally. If you'd still like to donate goods, check with organizations to see what they are currently accepting.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">Why should I donate to support the Noakhali flood victims?</div>
+                  <div class="collapse-content">
+                    <p>Noakhali has been severely affected by destructive floods, leaving thousands homeless and without basic necessities. By donating, you provide immediate relief in the form of food, clean water, shelter, and medical care, helping families survive and recover from the disaster.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">Why should I donate to help flood victims in Feni?</div>
+                  <div class="collapse-content">
+                    <p>Your donation can provide lifesaving assistance to those affected by the flood. Immediate support is needed for food, shelter, water, and medical care. Every contribution, no matter the size, can make a significant difference in the lives of the people suffering from this disaster.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">What is the Quota Movement of 2024?</div>
+                  <div class="collapse-content">
+                    <p>The Quota Movement of 2024 is a mass protest by students and activists against certain quota policies in public sector jobs and higher education in [specific country]. The movement has led to clashes with law enforcement, resulting in injuries to many protestors.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How can I spread the word about the need for donations?</div>
+                  <div class="collapse-content">
+                    <p>You can help by sharing information on social media, organizing local fundraising events, and talking to your friends and family about the situation. The more people are aware, the more help the flood victims can receive.</p>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+</body>
+</html>
