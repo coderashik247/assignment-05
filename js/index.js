@@ -17,20 +17,21 @@ document.getElementById('donate-now-1').addEventListener('click', function () {
 
         document.getElementById('history-section')
 
-        // const giveTitle = getTitle('noakhali-title');
-        // // History Part
-        // const historyItem = document.createElement('div');
-        // historyItem.className = "bg-red-200 rounded-lg border border-black my-2 p-2";
-        
-        // historyItem.innerHTML = `
-        //     <p>${donateAmount} Taka is Donated for ${giveTitle}</p>
-        //     <p>${new Date().toLocaleDateString()}</p>
-        // `;
-        
-        // const historyContainer = document.getElementById('history-section');
-        // // Prepend the new item to the top of the container
-        // historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-        
+        const giveTitle = getTitle('noakhali-title');
+
+        // History Part
+        const historyItem = document.createElement('div');
+        historyItem.className = "rounded-lg border-2 border-gray-200 my-2 px-3 space-y-2 py-4";
+
+        historyItem.innerHTML = `
+            <p>${donateAmount} Taka is Donated for ${giveTitle}</p>
+            <p>${new Date().toLocaleDateString()}</p>
+        `;
+
+        const historyContainer = document.getElementById('history-list');
+        // Prepend the new item to the top of the container
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
     }
 })
 
@@ -49,6 +50,21 @@ document.getElementById('donate-now-2').addEventListener('click', function () {
         const updateTotalBalance = getTextDonationAmount('balance') - getInputDonationAmount('donate-feni');
 
         document.getElementById('balance').innerText = updateTotalBalance;
+
+        const giveTitle = getTitle('feni-title');
+
+        // History Part
+        const historyItem = document.createElement('div');
+        historyItem.className = "rounded-lg border-2 border-gray-200 my-2 px-3 space-y-2 py-4";
+
+        historyItem.innerHTML = `
+                    <p>${donateAmount} Taka is Donated for ${giveTitle}</p>
+                    <p>${new Date().toLocaleDateString()}</p>
+                `;
+
+        const historyContainer = document.getElementById('history-list');
+        // Prepend the new item to the top of the container
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
     }
 })
 
@@ -67,6 +83,20 @@ document.getElementById('donate-now-3').addEventListener('click', function () {
         const updateTotalBalance = getTextDonationAmount('balance') - getInputDonationAmount('donate-quota');
 
         document.getElementById('balance').innerText = updateTotalBalance;
+
+        const giveTitle = getTitle('quota-title');
+        // History Part
+        const historyItem = document.createElement('div');
+        historyItem.className = "rounded-lg border-2 border-gray-200 my-2 px-3 space-y-2 py-4";
+
+        historyItem.innerHTML = `
+                    <p>${donateAmount} Taka is Donated for ${giveTitle}</p>
+                    <p>${new Date().toLocaleDateString()}</p>
+                `;
+
+        const historyContainer = document.getElementById('history-list');
+        // Prepend the new item to the top of the container
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
     }
 })
 
@@ -74,15 +104,17 @@ document.getElementById('donate-now-3').addEventListener('click', function () {
 // Get the buttons and sections
 document.getElementById('history').addEventListener('click', function () {
     document.getElementById('history').classList.add('bg-primary');
-    // document.getElementById('destination-tab').classList.add('hidden');
+    document.getElementById('destination-tab').classList.add('hidden');
+    document.getElementById('footer-section').classList.add('hidden');
     document.getElementById('destination').classList.remove('bg-primary');
 
 })
 
 document.getElementById('destination').addEventListener('click', function () {
     document.getElementById('destination').classList.add('bg-primary');
-    // document.getElementById('destination-tab').classList.remove('hidden');
+    document.getElementById('destination-tab').classList.remove('hidden');
     document.getElementById('history').classList.remove('bg-primary');
+    document.getElementById('footer-section').classList.remove('hidden');
 
 })
 
