@@ -5,6 +5,9 @@ document.getElementById('donate-now-1').addEventListener('click', function () {
     if (donateAmount < 0 || isNaN(donateAmount)) {
         alert('Wrong Amount');
     }
+    else if(getTextDonationAmount('balance') < donateAmount ){
+        alert('Wrong Amount')
+    }
     else {
         my_modal_5.showModal()
         const updateBalanceFlood = getInputDonationAmount('donate-noakhali') + getTextDonationAmount('donate-balance-noa');
@@ -41,6 +44,9 @@ document.getElementById('donate-now-2').addEventListener('click', function () {
     if (donateAmount < 0 || isNaN(donateAmount)) {
         alert('Wrong Amount');
     }
+    else if(getTextDonationAmount('balance') < donateAmount ){
+        alert('Wrong Amount')
+    }
     else {
         my_modal_6.showModal();
         const updateBalanceFlood = getInputDonationAmount('donate-feni') + getTextDonationAmount('donate-balance-feni');
@@ -73,6 +79,9 @@ document.getElementById('donate-now-3').addEventListener('click', function () {
     const donateAmount = getInputDonationAmount('donate-quota')
     if (donateAmount < 0 || isNaN(donateAmount)) {
         alert('Wrong Amount');
+    }
+    else if(getTextDonationAmount('balance') < donateAmount ){
+        alert('Wrong Amount')
     }
     else {
         my_modal_7.showModal();
